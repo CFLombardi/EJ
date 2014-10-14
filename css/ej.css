@@ -1,0 +1,30 @@
+.myCell
+{
+	display: table-cell;
+}
+
+.myTable
+{
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.quarterback
+{
+	/**float: left;*/
+	color: black;
+}
+
+.mainText
+{
+	margin-bottom: 0px;
+}
+
+.site-wrapper
+{
+	background-image: url("../images/pManning.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center top;
+}
