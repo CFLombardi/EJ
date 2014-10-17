@@ -1,3 +1,20 @@
+.better
+{
+	margin-left: 5px;
+}
+
+.btn
+{
+	background-color: #001F52;
+	border-color: #001F52;
+	color: white;
+}
+
+.is
+{
+	margin-right: 5px;
+}
+
 .myCell
 {
 	display: table-cell;
@@ -5,20 +22,21 @@
 
 .myTable
 {
+	background-color: #001F52;
+	border-radius: 5px;
 	display: table;
 	margin-right: auto;
 	margin-left: auto;
+	margin-bottom: 15px;
+	
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .quarterback
 {
-	/**float: left;*/
 	color: black;
-}
-
-.mainText
-{
-	margin-bottom: 0px;
 }
 
 .site-wrapper
