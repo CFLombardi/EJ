@@ -6,33 +6,46 @@
 .broncos
 {
 	background-color: #001F52;
-	border: 0px;
-	color: #F05523;
+	border: 1px solid #F05523;
+	color: #FFFFFF;
+}
+
+.centerPiece
+{
+	border-radius: 5px;
+	
+	margin-bottom: 20px;
 }
 
 .colts
 {
-	background-color: #003A70;
-	border: 0px;
+	background-color: #003689;
+	border: 1px solid #FFFFFF;
 	color: #FFFFFF;
 }
 
 .dolphins
 {
 	background-color: #0D6264;
-	border: 0px;
+	border: 1px solid #FFFFFF;
 	color: #EE4F25;
+}
+
+.field
+{
+	text-align: center;
 }
 
 .is
 {
+	margin-bottom: 0px;
 	margin-right: 5px;
 }
 
 .lions
 {
 	background-color: #006DB0;
-	border: 0px;
+	border: 1px solid #000000;
 	color: #BCC4C9;
 }
 
@@ -44,6 +57,7 @@
 .myTable
 {
 	border-radius: 5px;
+	border: 1px;
 	display: table;
 	margin-right: auto;
 	margin-left: auto;
@@ -57,18 +71,22 @@
 .patriots
 {
 	background-color: #0C2340;
-	border: 0px;
-	color: #A2AAAD;
+	border: 1px solid #A2AAAD;
+	color: #FFFFFF;
 }
 
 .quarterback
 {
 	color: black;
+	margin: 0px;
+	padding: 0px;
 }
+
+
 
 .site-wrapper
 {
-	background-image: url("../images/dMarino.jpg");
+	background-image: url("../images/pManning.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center top;
