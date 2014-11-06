@@ -72,21 +72,24 @@
 			{
 				if($(".btn").hasClass("broncos"))
 				{
-					$(".btn").css("background-color", "#F05523");
-					$(".btn").css("border", "1px solid #FFFFFF");
-					$(".btn").css("color", "#001F52");
+					setColorScheme("#F05523", "1px solid #FFFFFF", "#001F52");
 				}
 			}, function()
 			{
 				if($(".btn").hasClass("broncos"))
 				{
-					$(".btn").css("background-color", "#001F52");
-					$(".btn").css("border", "1px solid #F05523");
-					$(".btn").css("color", "#FFFFFF");
+					setColorScheme("#001F52", "1px solid #F05523", "#FFFFFF");
 				}
 			});
 			
 		});
+		
+		function setColorScheme(background, trim, font)
+		{
+			$(".btn").css("background-color", background);
+			$(".btn").css("border", trim);
+			$(".btn").css("color", font);
+		}
 	
 		function blankText()
 		{
