@@ -44,13 +44,13 @@
 		</div>
 	</body>
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src = "js/jquery-1.11.1.js"></script>
 	
 	<script type = "text/javascript">
 
 		$(document).ready(function()
 		{
+			//text input field
 			$(".field").focusin(function()
 			{
 				if($(this).val() == "blank")
@@ -66,6 +66,26 @@
 					$(this).val("blank");
 				}
 			});
+			
+			//hover search button
+			$(".btn").hover(function()
+			{
+				if($(".btn").hasClass("broncos"))
+				{
+					$(".btn").css("background-color", "#F05523");
+					$(".btn").css("border", "1px solid #FFFFFF");
+					$(".btn").css("color", "#001F52");
+				}
+			}, function()
+			{
+				if($(".btn").hasClass("broncos"))
+				{
+					$(".btn").css("background-color", "#001F52");
+					$(".btn").css("border", "1px solid #F05523");
+					$(".btn").css("color", "#FFFFFF");
+				}
+			});
+			
 		});
 	
 		function blankText()
