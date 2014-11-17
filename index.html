@@ -27,14 +27,14 @@
 						</div>
 					</div>
 					<div class = "inner cover">
-						<div class = "centerPiece broncos">
+						<div class = "centerPiece patriots">
 							<p class = "lead is sameLine">Is</p>
 							<form class = "quarterback sameLine">
 								<input class = "field" id = "quarterback" name = "quarterback" type="text" value = "blank">
 							</form>
 							<p class = "lead better sameLine">better than EJ Manuel?</p>
 						</div>
-						<div class = "btn btn-lg btn-default broncos">Search</div>
+						<div class = "btn btn-lg btn-default patriots">Search</div>
 					</div>
 					<div class = "mastfoot">
 					
@@ -74,11 +74,43 @@
 				{
 					setColorScheme("#F05523", "1px solid #FFFFFF", "#001F52");
 				}
+				else if($(".btn").hasClass("colts"))
+				{
+					setColorScheme("#FFFFFF", "1px solid #003689", "#003689");
+				}
+				else if($(".btn").hasClass("dolphins"))
+				{
+					setColorScheme("#EE4F25", "1px solid #FFFFFF", "#0D6264");
+				}
+				else if($(".btn").hasClass("lions"))
+				{
+					setColorScheme("#BCC4C9", "1px solid #000000", "#006DB0");
+				}
+				else if($(".btn").hasClass("patriots"))
+				{
+					setColorScheme("#FFFFFF", "border: 1px solid #A2AAAD", "#0C2340");
+				}
 			}, function()
 			{
 				if($(".btn").hasClass("broncos"))
 				{
 					setColorScheme("#001F52", "1px solid #F05523", "#FFFFFF");
+				}
+				else if($(".btn").hasClass("colts"))
+				{
+					setColorScheme("#003689", "1px solid #FFFFFF", "#FFFFFF");
+				}
+				else if($(".btn").hasClass("dolphins"))
+				{
+					setColorScheme("#0D6264", "1px solid #FFFFFF", "#EE4F25");
+				}
+				else if($(".btn").hasClass("lions"))
+				{
+					setColorScheme("#006DB0", "1px solid #000000", "#BCC4C9");
+				}
+				else if($(".btn").hasClass("patriots"))
+				{
+					setColorScheme("#0C2340", "1px solid #FFFFFF", "#A2AAAD");
 				}
 			});
 			

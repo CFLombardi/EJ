@@ -73,8 +73,8 @@
 .patriots
 {
 	background-color: #0C2340;
-	border: 1px solid #A2AAAD;
-	color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	color: #A2AAAD;
 }
 
 .quarterback
@@ -91,7 +91,7 @@
 
 .site-wrapper
 {
-	background-image: url("../images/pManning.jpg");
+	background-image: url("../images/tBrady.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center top;
