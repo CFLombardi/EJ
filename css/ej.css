@@ -89,9 +89,28 @@
 	display: inline
 }
 
+.QB-background
+{
+	position: fixed;
+	
+	width: inherit;
+}
+
+@media(max-width: 960px)
+{
+	.QB-background
+	{
+		width: 960px;
+	}
+}
+
+.site-wrapper-inner
+{
+	position: relative;
+}
+
 .site-wrapper
 {
-	background-image: url("../images/tBrady.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center top;
