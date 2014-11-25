@@ -51,30 +51,23 @@
 	color: #BCC4C9;
 }
 
-.myCell
-{
-	display: table-cell;
-}
-
-.myTable
-{
-	border-radius: 5px;
-	border: 1px;
-	display: table;
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 15px;
-	
-	padding-top: 15px;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
 .patriots
 {
 	background-color: #0C2340;
 	border: 1px solid #FFFFFF;
 	color: #A2AAAD;
+}
+
+.QB-background
+{
+	background-image: url("../images/tBrady.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: fixed;
+	
+	width: inherit;
+	height: inherit;
 }
 
 .quarterback
@@ -89,29 +82,7 @@
 	display: inline
 }
 
-.QB-background
-{
-	position: fixed;
-	
-	width: inherit;
-}
-
-@media(max-width: 960px)
-{
-	.QB-background
-	{
-		width: 960px;
-	}
-}
-
-.site-wrapper-inner
+.search
 {
 	position: relative;
-}
-
-.site-wrapper
-{
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center top;
 }

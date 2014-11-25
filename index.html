@@ -14,8 +14,10 @@
 	</head>
 	<body>
 		<div class = "site-wrapper">
-			<img class = "QB-background" src = "images/tBrady.jpg">
-			<div class = "site-wrapper-inner">
+			<div class = "site-wrapper-inner QB-background">
+				
+			</div>
+			<div class = "site-wrapper-inner search">
 				<div class = "cover-container">
 					<div class = "masthead clearfix">
 						<div class = "inner">
@@ -51,7 +53,10 @@
 
 		$(document).ready(function()
 		{
-			//text input field
+			//changes the QB image on a timed interval
+			setInterval("swapBackground()", 10000);
+			
+			//blanks out the input field when the user clicks in it
 			$(".field").focusin(function()
 			{
 				if($(this).val() == "blank")
@@ -60,6 +65,8 @@
 				}
 			});
 			
+			//if the input field is blank when the user clicks out of it
+			//this will put "blank" back in the field
 			$(".field").focusout(function()
 			{
 				if($(this).val() == "")
@@ -68,7 +75,8 @@
 				}
 			});
 			
-			//hover search button
+			//changes the color scheme of the search button
+			//when hovering over it.
 			$(".btn").hover(function()
 			{
 				if($(".btn").hasClass("broncos"))
@@ -113,25 +121,28 @@
 				{
 					setColorScheme("#0C2340", "1px solid #FFFFFF", "#A2AAAD");
 				}
-			});
-			
+			});			
 		});
 		
+		//changes the color scheme of the site based on the QB being displayed
 		function setColorScheme(background, trim, font)
 		{
 			$(".btn").css("background-color", background);
 			$(".btn").css("border", trim);
 			$(".btn").css("color", font);
 		}
-	
-		function blankText()
-		{
-			document.getElementById("quarterback").value = "blank";
-		}
 		
-		function clearText()
+		function swapBackground()
 		{
-			document.getElementById("quarterback").value = "";
+			$(".QB-background").fadeOut(function()
+			{
+				$(".QB-background").css("background-image", "url(images/pManning.jpg)");
+				$(".QB-background").fadeIn();
+			});
+			$(".centerPiece").addClass("broncos");
+			$(".centerPiece").removeClass("patriots");
+			$(".btn").addClass("broncos");
+			$(".btn").removeClass("patriots");
 		}
 	</script>
 </html>
