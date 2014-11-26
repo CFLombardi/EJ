@@ -30,14 +30,14 @@
 						</div>
 					</div>
 					<div class = "inner cover">
-						<div class = "centerPiece patriots">
+						<div class = "centerPiece broncos">
 							<p class = "lead is sameLine">Is</p>
 							<form class = "quarterback sameLine">
 								<input class = "field" id = "quarterback" name = "quarterback" type="text" value = "blank">
 							</form>
 							<p class = "lead better sameLine">better than EJ Manuel?</p>
 						</div>
-						<div class = "btn btn-lg btn-default patriots">Search</div>
+						<div class = "btn btn-lg btn-default broncos">Search</div>
 					</div>
 					<div class = "mastfoot">
 					
@@ -50,11 +50,13 @@
 	<script src = "js/jquery-1.11.1.js"></script>
 	
 	<script type = "text/javascript">
-
+		//This will help us determine what team is being displayed.
+		var team = "0";
+	
 		$(document).ready(function()
 		{
 			//changes the QB image on a timed interval
-			setInterval("swapBackground()", 10000);
+			setInterval("swapTeam(team)", 3000);
 			
 			//blanks out the input field when the user clicks in it
 			$(".field").focusin(function()
@@ -132,17 +134,47 @@
 			$(".btn").css("color", font);
 		}
 		
-		function swapBackground()
+		function swapTeam(theTeam)
+		{
+			if(theTeam == 0)
+			{
+				changeBackground("broncos", "colts", "images/aLuck.jpg");
+				team = 1;
+			}
+			else if(theTeam == 1)
+			{
+				changeBackground("colts", "dolphins", "images/dMarino.jpg");
+				team = 2;
+			}
+			else if(theTeam == 2)
+			{
+				changeBackground("dolphins", "lions", "images/mStafford.jpg");
+				team = 3;
+			}
+			else if(theTeam == 3)
+			{
+				changeBackground("lions", "patriots", "images/tBrady.jpg");
+				team = 4;
+			}
+			else if(theTeam == 4)
+			{
+				changeBackground("patriots", "broncos", "images/pManning.jpg");
+				team = 0;
+			}
+			
+		}
+		
+		function changeBackground(oldTeam, newTeam, theImage)
 		{
 			$(".QB-background").fadeOut(function()
 			{
-				$(".QB-background").css("background-image", "url(images/pManning.jpg)");
+				$(".QB-background").css("background-image", "url("+theImage+")");
 				$(".QB-background").fadeIn();
 			});
-			$(".centerPiece").addClass("broncos");
-			$(".centerPiece").removeClass("patriots");
-			$(".btn").addClass("broncos");
-			$(".btn").removeClass("patriots");
+			$(".centerPiece").addClass(newTeam);
+			$(".centerPiece").removeClass(oldTeam);
+			$(".btn").addClass(newTeam);
+			$(".btn").removeClass(oldTeam);
 		}
 	</script>
 </html>
