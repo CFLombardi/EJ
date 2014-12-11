@@ -1,2 +1,8 @@
-11/18/14 6:03PM
-I need to change the margin-left property after 960px and less so that the image properly scales
+12/10
+$(".searchField").on("keypress", function(e)
+		{
+			if(e.which == 13)
+			{
+				e.preventDefault();
+			}
+		});
