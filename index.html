@@ -30,6 +30,7 @@
 						</div>
 					</div>
 					<div class = "inner cover">
+						<img class = "result" src = "images/yes/yes2.jpg">
 						<div class = "centerPiece broncos">
 							<p class = "lead is sameLine">Is</p>
 							<form class = "quarterback sameLine">
@@ -43,9 +44,7 @@
 						
 					</div>
 				</div>
-				<div class = "result">
-					
-				</div>
+				
 			</div>
 		</div>
 	</body>
@@ -53,13 +52,18 @@
 	<script src = "js/jquery-1.11.1.js"></script>
 	
 	<script type = "text/javascript">
-		//This will help us determine what team is being displayed.
-		var team = 0;
+		//Global variables
+		var backgroundImage = "images/pManning.jpg";
 		var isHovering = 0;
-		var resultImage = "images/yes/yes2.jpg";
+		var resultImage = "images/yes/megatron.jpg";
+		var team = 0;
+		
 	
 		$(document).ready(function()
 		{
+			//set the background image
+			$(".QB-background").css("background-image", "url("+backgroundImage+")");
+			
 			//Hide the results div
 			$(".result").hide();
 			
@@ -85,6 +89,7 @@
 				}
 			});
 			
+			//If the user hits the Enter key, it'll trigger the search button
 			$(".searchField").on("keypress", function(e)
 			{
 				if(e.which == 13)
@@ -94,13 +99,18 @@
 				}
 			});
 			
-			//reveals the result div once the button is clicked
+			//reveals the result div once the button is clicked and a valid
+			//value is in the input field.
 			$(".btn").click(function()
 			{
 				if( ($(".searchField").val() != "") && ($(".searchField").val() != "blank") )
 				{
-					$(".result").toggle();
-					$(".result").css("background-image", "url("+resultImage+")");
+					$(".centerPiece").fadeOut("fast");
+					$(".btn").fadeOut("fast", function()
+					{
+						$(".result").attr("src", resultImage);
+						$(".result").toggle();
+					});
 				}
 			});
 			
@@ -157,7 +167,7 @@
 			});			
 		});
 		
-		//changes the color scheme of the site based on the QB being displayed
+		//changes the color scheme of an element on the site
 		function setColorScheme(background, trim, font)
 		{
 			$(".btn").css("background-color", background);
@@ -165,6 +175,11 @@
 			$(".btn").css("color", font);
 		}
 		
+		//this changes the theme of the site.  It'll determine
+		//which QB is being displayed, and based on that it'll
+		//change the color scheme of each element (the search field, button, etc.)
+		//It also changes the color of the search button if the user
+		//is currently hovering over the button.
 		function swapTeam(theTeam)
 		{
 			if(theTeam == 0)
@@ -235,6 +250,9 @@
 			
 		}
 		
+		//this fades in the next QB to be displayed.  It also sets the team's
+		//class to the search field and the search button when changing the
+		//image.
 		function changeBackground(oldTeam, newTeam, theImage)
 		{
 			$(".QB-background").fadeOut(function()

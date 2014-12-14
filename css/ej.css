@@ -33,11 +33,6 @@
 	color: #EE4F25;
 }
 
-.searchField
-{
-	text-align: center;
-}
-
 .is
 {
 	margin-bottom: 0px;
@@ -60,7 +55,6 @@
 
 .QB-background
 {
-	background-image: url("../images/pManning.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center top;
@@ -79,14 +73,19 @@
 
 .result
 {
-	background-repeat: no-repeat;
-	background-size: cover;
+	/*background-repeat: no-repeat;
+	background-size: cover;*/
 	background-position: center top;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 50px;
+	
 	width: 50%;
 	height: 281px;
+}
+
+.searchField
+{
+	text-align: center;
 }
 
 .sameLine
